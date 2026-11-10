@@ -10,7 +10,26 @@
 
 请前往 [Releases](https://github.com/caibenhao/capybara-lulu/releases) 查看已发布版本，并选择适合你电脑的安装包。
 
-目前还没有发布安装包。噜噜正在收拾小行李，准备来你的桌面住下。
+目前提供 **macOS Apple Silicon（M 系列芯片）** 安装包，请下载名称以 `_aarch64.dmg` 结尾的文件。Intel Mac、Windows 和 Linux 安装包暂未提供。
+
+## macOS 安装步骤
+
+噜噜目前采用临时签名，**尚未使用 Apple Developer ID 正式签名，也未完成 Apple 公证**，首次运行时 macOS 可能阻止打开。
+
+1. 从本仓库 [最新正式版本](https://github.com/caibenhao/capybara-lulu/releases/latest) 下载 DMG 安装包。
+2. 打开 DMG，将“水豚噜噜”拖入“应用程序”，然后弹出磁盘镜像。
+3. 在“应用程序”中打开“水豚噜噜”。若提示无法验证开发者或 Apple 无法检查恶意软件，先关闭提示，再进入“系统设置 → 隐私与安全性”，找到本次拦截记录，点击“仍要打开”，按提示确认。
+4. 若没有“仍要打开”入口，并提示应用“已损坏”，请先确认文件来自本仓库的正式 Release。仅对这份可信应用，在终端执行以下命令后重新打开：
+
+```bash
+xattr -dr com.apple.quarantine "/Applications/水豚噜噜.app"
+```
+
+此命令只移除噜噜的下载隔离标记，不需要关闭系统 Gatekeeper。如果 macOS 明确提示检测到恶意软件，请停止安装，不要用此命令绕过提示。
+
+## 应用内更新
+
+安装后可在应用设置中检查并安装更新。更新包会经过独立的 Tauri 更新签名校验；该校验不等同于 Apple 公证。
 
 ## 关于这个仓库
 
