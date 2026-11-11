@@ -36,7 +36,7 @@
 | Intel Mac | `_x64.dmg` |
 | Windows x64（Intel / AMD 64 位） | `_windows_x64-setup.exe` |
 
-当前正式版为 [`0.1.7`](https://github.com/caibenhao/capybara-lulu/releases/tag/app-v0.1.7)，已提供 Apple Silicon Mac、Intel Mac 和 Windows x64 安装包，可从上述入口下载。具体提供的平台以公开 Release 的资产列表为准。`.sig`、`.app.tar.gz` 和 JSON 文件用于应用更新与验证，首次安装请选择 DMG 或 Windows setup EXE。
+当前正式版为 [`1.0.0`](https://github.com/caibenhao/capybara-lulu/releases/tag/app-v1.0.0)，已提供 Apple Silicon Mac、Intel Mac 和 Windows x64 安装包，可从上述入口下载。具体提供的平台以公开 Release 的资产列表为准。`.sig`、`.app.tar.gz` 和 JSON 文件用于应用更新与验证，首次安装请选择 DMG 或 Windows setup EXE。
 
 ### macOS
 
@@ -59,7 +59,7 @@ xattr -dr com.apple.quarantine "/Applications/水豚噜噜.app"
 
 Windows x64 安装包已随 `0.1.7` 正式发布。目前未使用代码签名证书签名，首次运行安装程序时可能出现 SmartScreen 提示。
 
-1. 从 [最新正式版本](https://github.com/caibenhao/capybara-lulu/releases/latest) 下载名称以 `_windows_x64-setup.exe` 结尾的 NSIS 安装包，例如 `capybara-lulu_0.1.7_windows_x64-setup.exe`。选择 EXE 文件，不要下载同名的 `.sig`；当前不提供 MSI 安装包。
+1. 从 [最新正式版本](https://github.com/caibenhao/capybara-lulu/releases/latest) 下载名称以 `_windows_x64-setup.exe` 结尾的 NSIS 安装包，例如 `capybara-lulu_1.0.0_windows_x64-setup.exe`。选择 EXE 文件，不要下载同名的 `.sig`；当前不提供 MSI 安装包。
 2. 双击安装。如果 Windows SmartScreen 提示未知发布者，请先确认文件来自本仓库的正式 Release，再选择「更多信息 → 仍要运行」。若 Windows 安全中心明确检测到恶意软件，请停止安装，不要关闭防护或绕过拦截。
 3. 应用依赖 Microsoft Edge WebView2 Runtime。若系统尚未安装，安装程序会尝试下载并安装，请保持联网；如果自动安装失败，可从 [Microsoft 官方页面](https://developer.microsoft.com/microsoft-edge/webview2/#download-section) 安装 Evergreen WebView2 Runtime 的 x64 版本，再重新运行噜噜安装包。
 4. 安装完成后，从开始菜单启动「水豚噜噜」。首次启动只显示桌面宠物，可通过宠物右键菜单或托盘图标打开设置等面板。
